@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"C:/Users/ymedina/Documents/Claude/imagenes/logo.svg\" \"C:/Users/ymedina/Documents/Claude/rcv-express/src/assets/logo.svg\")",
+      "Bash(cp \"C:/Users/ymedina/Documents/Claude/imagenes/fondo.svg\" \"C:/Users/ymedina/Documents/Claude/rcv-express/src/assets/fondo.svg\")",
+      "Bash(npm run *)",
+      "Bash(npx vite *)",
+      "mcp__ide__getDiagnostics"
+    ]
+  }
+}

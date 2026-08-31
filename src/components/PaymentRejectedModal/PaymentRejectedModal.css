@@ -1,0 +1,17 @@
+.payment-rejected__icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.payment-rejected__message {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  padding: 12px 14px;
+  background: #fef2f2;
+  border-radius: 10px;
+  color: #b91c1c;
+  font-weight: 500;
+}

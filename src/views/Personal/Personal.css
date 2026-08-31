@@ -1,0 +1,635 @@
+.personal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.personal__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 44px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 28px rgba(61, 31, 143, 0.09);
+}
+
+.personal__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+.personal__subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+/* ── Tabs ──────────────────────────────────────── */
+.personal__tabs {
+  display: flex;
+  gap: 0;
+  background: #f3f0fb;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 24px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.personal__tab {
+  padding: 7px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+}
+
+.personal__tab--active {
+  background: #fff;
+  color: #3d1f8f;
+  box-shadow: 0 1px 4px rgba(61, 31, 143, 0.1);
+}
+
+/* ── Upload / scan section ─────────────────────── */
+.personal__upload-section {
+  margin-bottom: 20px;
+}
+
+.personal__upload-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.personal__upload-hint {
+  font-size: 12px;
+  color: #9b7ad4;
+  margin-bottom: 12px;
+}
+
+.personal__recommendations {
+  background: #f7f4fd;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.personal__rec-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.personal__rec-intro {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.personal__rec-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.personal__rec-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+/* ── OCR loading / error ───────────────────────── */
+.personal__ocr-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.personal__ocr-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e5e7eb;
+  border-top-color: #9b7ad4;
+  border-radius: 50%;
+  animation: personal-ocr-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes personal-ocr-spin {
+  to { transform: rotate(360deg); }
+}
+
+.personal__ocr-error {
+  font-size: 12px;
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 4px;
+}
+
+/* ── Scan success card ─────────────────────────── */
+.personal__scan-success {
+  background: #f0fdf4;
+  border: 1.5px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.personal__scan-success-icon {
+  width: 52px;
+  height: 52px;
+  background: #16a34a;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+}
+
+.personal__scan-success-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.personal__scan-success-link {
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #3d1f8f;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Scan form separator ───────────────────────── */
+.personal__scan-form-separator {
+  border-top: 1px solid #f3f0fb;
+  padding-top: 20px;
+  margin-top: 4px;
+}
+
+/* ── Manual form ───────────────────────────────── */
+.personal__manual-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.personal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.personal__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.personal__required {
+  color: #9b7ad4;
+  font-size: 13px;
+}
+
+.personal__required-note {
+  font-size: 11px;
+  color: #9b7ad4;
+  margin-top: -4px;
+}
+
+/* ── Input ─────────────────────────────────────── */
+.personal__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.personal__input-icon {
+  position: absolute;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.personal__input {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1a1a2e;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.personal__input--with-icon {
+  padding-left: 36px;
+}
+
+.personal__input--date {
+  color: #6b7280;
+}
+
+.personal__input::placeholder {
+  color: #c4cad4;
+}
+
+.personal__input:focus {
+  border-color: #9b7ad4;
+  box-shadow: 0 0 0 3px rgba(155, 122, 212, 0.12);
+}
+
+/* ── Select ────────────────────────────────────── */
+.personal__select-wrapper {
+  position: relative;
+}
+
+.personal__select {
+  width: 100%;
+  padding: 10px 36px 10px 13px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1a1a2e;
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.personal__select:focus {
+  border-color: #9b7ad4;
+  box-shadow: 0 0 0 3px rgba(155, 122, 212, 0.12);
+}
+
+.personal__select:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.personal__select-wrapper--disabled .personal__select {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  border-color: #f3f4f6;
+}
+
+.personal__select-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Document row (tipo + número) ──────────────── */
+.personal__doc-row {
+  display: flex;
+  gap: 8px;
+}
+
+.personal__select-wrapper--tipo {
+  flex: 0 0 80px;
+}
+
+.personal__select--tipo {
+  padding-left: 10px;
+  padding-right: 28px;
+  text-align: center;
+}
+
+.personal__input--numero-doc {
+  flex: 1;
+  width: auto;
+}
+
+/* ── Phone row (prefix + number) ───────────────── */
+.personal__phone-row {
+  display: flex;
+  gap: 8px;
+}
+
+.personal__select-wrapper--prefix {
+  flex: 0 0 100px;
+}
+
+.personal__select--prefix {
+  padding-left: 10px;
+  padding-right: 28px;
+}
+
+.personal__input--phone {
+  flex: 1;
+  width: auto;
+}
+
+/* ── Phone combined (prefix + número en un solo control) ─ */
+.personal__phone-combined {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.personal__phone-combined:focus-within {
+  border-color: #9b7ad4;
+  box-shadow: 0 0 0 3px rgba(155, 122, 212, 0.12);
+}
+
+.personal__phone-combined--disabled {
+  background: #f9fafb;
+}
+
+.personal__phone-combined-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.personal__phone-combined-select {
+  width: 96px;
+  padding: 10px 26px 10px 13px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1a1a2e;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.personal__phone-combined-select:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.personal__phone-combined-select--tipo {
+  width: 78px;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.personal__phone-combined-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.personal__phone-combined-divider {
+  width: 1px;
+  background: #e5e7eb;
+  margin: 6px 0;
+  flex-shrink: 0;
+}
+
+.personal__phone-combined-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 13px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1a1a2e;
+  outline: none;
+}
+
+.personal__phone-combined-input::placeholder {
+  color: #c4cad4;
+}
+
+/* ── Radio buttons ─────────────────────────────── */
+.personal__radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.personal__radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  user-select: none;
+}
+
+.personal__radio-option input[type='radio'] {
+  display: none;
+}
+
+.personal__radio-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid #d1d5db;
+  flex-shrink: 0;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.personal__radio-dot::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.personal__radio-option--active {
+  border-color: #9b7ad4;
+  background: #faf7ff;
+}
+
+.personal__radio-option--active .personal__radio-dot {
+  border-color: #9b7ad4;
+}
+
+.personal__radio-option--active .personal__radio-dot::after {
+  background: #9b7ad4;
+}
+
+/* ── Field-level errors ────────────────────────── */
+.personal__field-error {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 2px;
+}
+
+.personal__input--error {
+  border-color: #ef4444 !important;
+}
+
+.personal__input--error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12) !important;
+}
+
+.personal__select-wrapper--error .personal__select {
+  border-color: #ef4444 !important;
+}
+
+.personal__select-wrapper--error .personal__select:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12) !important;
+}
+
+.personal__phone-combined--error {
+  border-color: #ef4444 !important;
+}
+
+.personal__phone-combined--error:focus-within {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12) !important;
+}
+
+.personal__radio-option--error {
+  border-color: #ef4444;
+}
+
+/* ── Error ─────────────────────────────────────── */
+.personal__error {
+  font-size: 13px;
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border-radius: 8px;
+}
+
+/* ── Buttons ───────────────────────────────────── */
+.personal__btn-continue {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #3d1f8f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(61, 31, 143, 0.28);
+  margin-bottom: 14px;
+}
+
+.personal__btn-continue:hover:not(:disabled) {
+  background: #4d2fa8;
+}
+
+.personal__btn-continue--disabled,
+.personal__btn-continue:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.personal__btn-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.personal__btn-back:hover {
+  color: #3d1f8f;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  .personal__card {
+    padding: 28px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal__card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+  .personal__title {
+    font-size: 20px;
+  }
+  .personal__tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .personal__tab {
+    text-align: center;
+  }
+  .personal__manual-form {
+    gap: 12px;
+  }
+  .personal__recommendations {
+    padding: 14px 16px;
+  }
+  .personal__rec-title {
+    font-size: 13px;
+  }
+  .personal__btn-continue {
+    padding: 13px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,228 @@
+.success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.success__error {
+  color: #dc2626;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.success__success {
+  color: #166534;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
+
+.success__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 44px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 28px rgba(61, 31, 143, 0.09);
+  text-align: center;
+}
+
+/* Icon area */
+.success__icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  height: 110px;
+}
+
+.success__circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success__check-svg {
+  animation: drawCheck 0.6s ease 0.3s both;
+}
+
+@keyframes drawCheck {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sparkles */
+.success__sparkle {
+  position: absolute;
+  animation: twinkle 1.5s ease-in-out infinite alternate;
+}
+
+.success__sparkle--top-left {
+  top: 8px;
+  left: 50%;
+  margin-left: -52px;
+  animation-delay: 0.1s;
+}
+
+.success__sparkle--top-right {
+  top: 4px;
+  right: 50%;
+  margin-right: -62px;
+  animation-delay: 0.3s;
+}
+
+.success__sparkle--bottom-left {
+  bottom: 8px;
+  left: 50%;
+  margin-left: -60px;
+  animation-delay: 0.5s;
+}
+
+@keyframes twinkle {
+  from {
+    opacity: 0.4;
+    transform: scale(0.85) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.1) rotate(20deg);
+  }
+}
+
+/* Text */
+.success__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  letter-spacing: -0.3px;
+}
+
+.success__subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Button */
+.success__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 24px;
+  background: #3d1f8f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 4px 18px rgba(61, 31, 143, 0.32);
+}
+
+.success__btn:hover {
+  background: #4d2fa8;
+  box-shadow: 0 6px 22px rgba(61, 31, 143, 0.42);
+}
+
+.success__btn:active {
+  transform: translateY(1px);
+}
+
+/* Download button */
+.success__btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 13px 22px;
+  background: #fff;
+  color: #3d1f8f;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: 1.5px solid #3d1f8f;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
+  margin-bottom: 12px;
+}
+
+.success__btn-download:hover:not(:disabled) {
+  background: #faf7ff;
+  box-shadow: 0 4px 14px rgba(61, 31, 143, 0.18);
+}
+
+.success__btn-download:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.success__btn-download:disabled {
+  border-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  background: #f9fafb;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  .success__card {
+    padding: 28px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .success__card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+  .success__title {
+    font-size: 20px;
+  }
+  .success__subtitle {
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  .success__icon-wrapper {
+    height: 90px;
+    margin-bottom: 20px;
+  }
+  .success__circle {
+    width: 84px;
+    height: 84px;
+  }
+  .success__btn {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+}

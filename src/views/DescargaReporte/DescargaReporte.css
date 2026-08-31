@@ -1,0 +1,124 @@
+.descarga-reporte {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0ecf8;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.descarga-reporte__bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.descarga-reporte__card {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 44px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 28px rgba(61, 31, 143, 0.09);
+  text-align: center;
+}
+
+.descarga-reporte__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.descarga-reporte__title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 12px;
+  letter-spacing: -0.4px;
+}
+
+.descarga-reporte__subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.descarga-reporte__error {
+  color: #dc2626;
+  font-size: 13px;
+  margin: 0 0 16px;
+}
+
+.descarga-reporte__success {
+  color: #166534;
+  font-size: 13px;
+  margin: 16px 0 0;
+}
+
+.descarga-reporte__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background: #3d1f8f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  box-shadow: 0 6px 20px rgba(61, 31, 143, 0.32);
+}
+
+.descarga-reporte__btn:hover:not(:disabled) {
+  background: #4d2fa8;
+  box-shadow: 0 8px 24px rgba(61, 31, 143, 0.42);
+}
+
+.descarga-reporte__btn:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.descarga-reporte__btn:disabled {
+  background: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .descarga-reporte__card {
+    padding: 28px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .descarga-reporte__card {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+  .descarga-reporte__title {
+    font-size: 22px;
+  }
+  .descarga-reporte__subtitle {
+    font-size: 13px;
+  }
+  .descarga-reporte__btn {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}

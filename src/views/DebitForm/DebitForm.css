@@ -1,0 +1,419 @@
+.debit-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.debit-form__card {
+  background: #fff;
+  border-radius: 20px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 28px rgba(61, 31, 143, 0.1);
+  overflow: hidden;
+}
+
+/* ── Splash / loading ─────────────────────────── */
+.debit-form--splash {
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding-top: 0;
+}
+
+/* ── Banner ────────────────────────────────────── */
+.debit-form__banner {
+  background: linear-gradient(135deg, #3d1f8f 0%, #6b4eaa 100%);
+  padding: 24px 28px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.debit-form__banner-sparkles {
+  position: absolute;
+  top: 12px;
+  right: 56px;
+  display: flex;
+  gap: 8px;
+  opacity: 0.7;
+}
+
+.debit-form__banner-content {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.debit-form__banner-price {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.debit-form__banner-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 400;
+}
+
+.debit-form__banner-quota {
+  margin-left: auto;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.15);
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* ── Body ──────────────────────────────────────── */
+.debit-form__body {
+  padding: 22px 28px 24px;
+}
+
+/* Amount row */
+.debit-form__amount-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f7f4fd;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+}
+
+.debit-form__amount-label {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.debit-form__amount-value {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #1a1a2e;
+}
+
+.debit-form__amount-value strong {
+  font-weight: 700;
+}
+
+.debit-form__info-btn {
+  color: #9b7ad4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  background: none;
+  border: none;
+}
+
+.debit-form__divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 14px 0;
+}
+
+/* Form fields */
+.debit-form__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.debit-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.debit-form__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.debit-form__input {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1a1a2e;
+  transition: border-color 0.2s;
+  background: #fff;
+}
+
+.debit-form__input:focus {
+  border-color: #9b7ad4;
+  outline: none;
+}
+
+.debit-form__select {
+  width: 100%;
+  padding: 10px 13px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1a1a2e;
+  transition: border-color 0.2s;
+  background: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%239b7ad4' strokeWidth='1.5' fill='none' strokeLinecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  cursor: pointer;
+}
+
+.debit-form__select:focus {
+  border-color: #9b7ad4;
+  outline: none;
+}
+
+/* ── Phone combined (prefix + número en un solo control) ─ */
+.debit-form__phone-combined {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.debit-form__phone-combined:focus-within {
+  border-color: #9b7ad4;
+  box-shadow: 0 0 0 3px rgba(155, 122, 212, 0.12);
+}
+
+.debit-form__phone-combined--disabled {
+  background: #f9fafb;
+}
+
+.debit-form__phone-combined-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.debit-form__phone-combined-select {
+  width: 96px;
+  padding: 10px 26px 10px 13px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1a1a2e;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.debit-form__phone-combined-select:disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.debit-form__phone-combined-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.debit-form__phone-combined-divider {
+  width: 1px;
+  background: #e5e7eb;
+  margin: 6px 0;
+  flex-shrink: 0;
+}
+
+.debit-form__phone-combined-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 13px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1a1a2e;
+  outline: none;
+}
+
+.debit-form__phone-combined-input::placeholder {
+  color: #c4cad4;
+}
+
+/* ── Documento combinado (tipo + número de cédula) ─────── */
+.debit-form__doc-combined {
+  display: flex;
+  align-items: stretch;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.debit-form__doc-combined:focus-within {
+  border-color: #9b7ad4;
+  box-shadow: 0 0 0 3px rgba(155, 122, 212, 0.12);
+}
+
+.debit-form__doc-combined-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.debit-form__doc-combined-select {
+  width: 62px;
+  padding: 10px 24px 10px 13px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1a1a2e;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.debit-form__doc-combined-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.debit-form__doc-combined-divider {
+  width: 1px;
+  background: #e5e7eb;
+  margin: 6px 0;
+  flex-shrink: 0;
+}
+
+.debit-form__doc-combined-input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 13px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #1a1a2e;
+  outline: none;
+}
+
+.debit-form__doc-combined-input::placeholder {
+  color: #c4cad4;
+}
+
+/* Error */
+.debit-form__error {
+  font-size: 13px;
+  color: #ef4444;
+  text-align: center;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border-radius: 8px;
+}
+
+/* Buttons */
+.debit-form__btn-continue {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #3d1f8f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(61, 31, 143, 0.28);
+  margin-bottom: 12px;
+}
+
+.debit-form__btn-continue:hover:not(:disabled) {
+  background: #4d2fa8;
+}
+
+.debit-form__btn-continue:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.debit-form__btn-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px;
+  transition: color 0.2s;
+}
+
+.debit-form__btn-back:hover {
+  color: #3d1f8f;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  .debit-form {
+    padding-top: 0;
+    align-items: flex-start;
+  }
+  .debit-form__body {
+    padding: 18px 22px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .debit-form__card {
+    border-radius: 16px;
+  }
+  .debit-form__banner {
+    padding: 18px 20px;
+  }
+  .debit-form__banner-price {
+    font-size: 22px;
+  }
+  .debit-form__banner-label {
+    font-size: 12px;
+  }
+  .debit-form__banner-sparkles {
+    right: 52px;
+  }
+  .debit-form__body {
+    padding: 16px 16px 20px;
+  }
+  .debit-form__btn-continue {
+    padding: 13px;
+    font-size: 14px;
+  }
+}

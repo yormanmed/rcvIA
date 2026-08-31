@@ -1,0 +1,103 @@
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* ── Connector line ────────────────────────────── */
+.stepper__line {
+  flex: 1;
+  max-width: 54px;
+  height: 1.5px;
+  background: #e5e7eb;
+}
+
+/* ── Step wrapper ──────────────────────────────── */
+.stepper__step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Halo (outermost ring) ─────────────────────── */
+.stepper__halo {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+/* ── Middle circle ─────────────────────────────── */
+.stepper__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
+}
+
+/* ── Inner dot ─────────────────────────────────── */
+.stepper__inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4cad4;
+  transition: background 0.3s ease, width 0.3s ease, height 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* ── Active step ───────────────────────────────── */
+.stepper__step--active .stepper__halo {
+  width: 39px;
+  height: 39px;
+  background: rgba(155, 122, 212, 0.16);
+  border: none;
+}
+
+.stepper__step--active .stepper__circle {
+  width: 24px;
+  height: 24px;
+  background: #4a28a0;
+}
+
+.stepper__step--active .stepper__inner {
+  width: 8px;
+  height: 8px;
+  background: #fff;
+}
+
+/* ── Completed step ────────────────────────────── */
+.stepper__step--completed .stepper__halo {
+  border-color: #c5b4e3;
+}
+
+.stepper__step--completed .stepper__inner {
+  background: #9b7ad4;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 480px) {
+  .stepper {
+    margin-bottom: 18px;
+  }
+  .stepper__line {
+    max-width: 39px;
+  }
+  .stepper__step--active .stepper__halo {
+    width: 35px;
+    height: 35px;
+  }
+  .stepper__step--active .stepper__circle {
+    width: 21px;
+    height: 21px;
+  }
+}

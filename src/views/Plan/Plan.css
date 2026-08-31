@@ -1,0 +1,196 @@
+.plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.plan__card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 36px 44px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 4px 28px rgba(61, 31, 143, 0.09);
+}
+
+.plan__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: -0.3px;
+}
+
+.plan__subtitle {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.plan__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* Plan item */
+.plan__item {
+  border: 1.5px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.plan__item--selected {
+  border-color: #3d1f8f;
+}
+
+.plan__item-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+}
+
+.plan__item-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.plan__item-body {
+  padding: 0 16px 16px;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 14px;
+}
+
+.plan__price {
+  margin-bottom: 12px;
+}
+
+.plan__price-amount {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.5px;
+}
+
+.plan__price-period {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.plan__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.plan__features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #374151;
+}
+
+.plan__see-more {
+  font-size: 12px;
+  color: #6b4eaa;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Buttons */
+.plan__btn-pay {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #3d1f8f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 16px rgba(61, 31, 143, 0.28);
+  margin-bottom: 14px;
+}
+
+.plan__btn-pay:hover:not(:disabled) {
+  background: #4d2fa8;
+}
+
+.plan__btn-pay:disabled {
+  background: #e5e7eb;
+  color: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.plan__btn-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s;
+}
+
+.plan__btn-back:hover {
+  color: #3d1f8f;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+  .plan__card {
+    padding: 28px 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan__card {
+    padding: 24px 16px;
+    border-radius: 16px;
+  }
+  .plan__title {
+    font-size: 20px;
+  }
+  .plan__price-amount {
+    font-size: 22px;
+  }
+  .plan__item-header {
+    padding: 12px 14px;
+  }
+  .plan__item-body {
+    padding: 0 14px 14px;
+    padding-top: 12px;
+  }
+  .plan__btn-pay {
+    padding: 13px;
+    font-size: 14px;
+  }
+}
